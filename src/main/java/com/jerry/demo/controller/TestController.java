@@ -5,8 +5,10 @@ import com.jerry.mvcframework.annotation.JAutowired;
 import com.jerry.mvcframework.annotation.JController;
 import com.jerry.mvcframework.annotation.JRequestMapping;
 import com.jerry.mvcframework.annotation.JRequestParam;
-import com.sun.deploy.net.HttpRequest;
-import com.sun.deploy.net.HttpResponse;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * Created by Yangjy on 2018/2/27.
@@ -19,7 +21,17 @@ public class TestController {
     private DemoService demoService;
 
     @JRequestMapping("/test")
-    public void test(HttpRequest req, HttpResponse resp ,@JRequestParam String name){
+    public void test(HttpServletRequest req, HttpServletResponse resp , @JRequestParam String name){
+
+    }
+
+    @JRequestMapping("/test1")
+    public void test1(HttpServletRequest req, HttpServletResponse resp ,@JRequestParam String name){
+
+    }
+
+    @JRequestMapping("/test2")
+    public void test2(HttpServletRequest req, HttpServletResponse resp ,@JRequestParam String name){
 
     }
 
